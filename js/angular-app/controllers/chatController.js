@@ -1,3 +1,5 @@
+"use strict";
+
 var chatController = function($scope) {
     $scope.username = 'Guest' + Math.floor(Math.random()*101);
     $scope.messages = {};
