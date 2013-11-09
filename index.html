@@ -17,21 +17,30 @@
             </button>
         </form>
         </div>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
-        <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
         <script type="text/javascript">
-        angular.module('chat', ['firebase']).controller('Chat', ['$scope', 'angularFire',
-            function($scope, angularFire) {
-            var ref = new Firebase('https://leftstitch.firebaseio.com/content');
-            angularFire(ref.limit(15), $scope, "messages");
-            $scope.username = 'Guest' + Math.floor(Math.random()*101);
-            $scope.addMessage = function() {
-                $scope.messages[ref.push().name()] = {
-                from: $scope.username, content: $scope.message
-                };
-                $scope.message = "";
-            }}]);
+            angular.module('chat', [])
+                .controller('Chat', ['$scope',
+                    function($scope) {
+                        $scope.username = 'Guest' + Math.floor(Math.random()*101);
+                        $scope.messages = {};
+                        $scope.addMessage = function() {
+                            var id = $scope.ref.push().name();
+                            $scope.messages[id] = {
+                                from: $scope.username, content: $scope.message
+                            };
+                            $scope.message = "";
+                            $scope.ref.child(id).set($scope.messages[id]);
+                        }
+                        $scope.ref.on('child_added', function(snapshot) {
+                            $scope.messages = snapshot;
+                        });
+                    }
+                ])
+                .run(function($rootScope) {
+                    $rootScope.ref = new Firebase('https://leftstitch.firebaseio.com/content');
+                });
         </script>
     </body>
 </html>
