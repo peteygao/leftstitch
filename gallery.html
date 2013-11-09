@@ -47,13 +47,25 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <div class="well" ng-app="leftStitch" ng-controller="main">
-          
+        <div class="well" ng-app="leftstitch" ng-controller="mainController">
 
         </div>
-        <footer>leftstitch</footer>
+
+        <footer class="row">
+            <div class="col-md-4 col-xs-14">Left side footer</div>
+            <div class="col-md-4 col-xs-14">&copy; 2013 LeftStitch</div>
+            <div class="col-md-4 col-xs-14">Right side footer</div>
+        </footer>
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+        <!-- Angular App Files -->
+        <script src="js/angular-app/controllers/mainController.js"></script>
+        <script src="js/angular-app/controllers/chatController.js"></script>
+
+        <!-- Startup Angular App -->
+        <script src="js/angular-app/modules/app.js"></script>
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
