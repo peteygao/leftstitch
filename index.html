@@ -22,31 +22,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
         <script src="js/ui-bootstrap-tpls-0.6.0.js"></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
-        <script type="text/javascript">
-            angular.module('chat', [])
-                .controller('Chat', ['$scope',
-                    function($scope) {
-                        $scope.username = 'Guest' + Math.floor(Math.random()*101);
-                        $scope.messages = {};
-                        $scope.addMessage = function() {
-                            var id = $scope.ref.push().name();
-                            $scope.messages[id] = {
-                                from: $scope.username, content: $scope.message
-                            };
-                            $scope.message = "";
-                            $scope.ref.child(id).set($scope.messages[id]);
-                        }
-
-                        // Fetches all the messages when the app loads, and when new messages are sent over the wire
-                        $scope.ref.on('child_added', function(snapshot) {
-                            $scope.messages[snapshot.name()] = snapshot.val();
-                            $scope.$apply();
-                        });
-                    }
-                ])
-                .run(function($rootScope) {
-                    $rootScope.ref = new Firebase('https://leftstitch.firebaseio.com/content');
-                });
-        </script>
+        <script src="/js/angular-app/controllers/chatController.js"></script>
+        <script src="/js/angular-app/modules/app.js"></script>
     </body>
 </html>
