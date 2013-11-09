@@ -1,8 +1,9 @@
 "use strict";
 
 angular.module('leftstitch', ['ui.bootstrap'])
-  .controller('chatController', ['$scope', chatController])
-  .controller('mainController', ['$scope', mainController])
-  .run(function($rootScope) {
-      $rootScope.ref = new Firebase('https://leftstitch.firebaseio.com/content');
-});
+    .controller('chatController', ['$scope', chatController])
+    .controller('mainController', ['$scope', mainController])
+    .run(function($rootScope) {
+        $rootScope._content = new Firebase('https://leftstitch.firebaseio.com/content');
+        $rootScope._form = new Firebase('https://leftstitch.firebaseio.com/form');
+    });
