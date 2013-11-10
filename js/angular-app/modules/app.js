@@ -1,7 +1,6 @@
 "use strict";
 
-angular.module('leftstitch', ['ui.bootstrap'])
-    //.controller('chatController', ['$scope', chatController])
+angular.module('leftstitch', ['ui.bootstrap', 'wu.masonry'])
     .controller('briefEntryController', ['$scope', briefEntryController])
     .controller('mainController', ['$scope', mainController])
     .run(function($rootScope) {

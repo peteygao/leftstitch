@@ -47,8 +47,8 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <div masonry id="content" class="well" ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
-            <div class="masonry-brick item" ng-repeat="picture in pictures">
+        <div masonry id="content" ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
+            <div class="masonry-brick item well" ng-repeat="picture in pictures">
                 <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
             </div>
         </div>
@@ -65,12 +65,13 @@
         <!-- Angular App Files -->
         <script src="js/angular-app/controllers/mainController.js"></script>
         <script src="js/angular-app/controllers/chatController.js"></script>
-        <script src="//passy.github.io/angular-masonry/angular-masonry.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.min.js"></script>
+        <script src="//passy.github.io/angular-masonry/angular-masonry.js"></script>
 
         <!-- Startup Angular App -->
         <script src="js/angular-app/modules/app.js"></script>
 
-
+        <script src="//desandro.github.io/imagesloaded/imagesloaded.pkgd.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
