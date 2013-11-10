@@ -1,10 +1,12 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>LeftStitch Gallery</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+
         <navigation class="row">
             <div class="col-xs-12 col-md-5">
                 <img src="img/logo.png" class="logo">
@@ -28,39 +30,18 @@
             </div>
         </navigation>
 
-        <div id="content">
-
-            <header class="row">
-                <div class="col-xs-12 featured-banner">
-                    <img src="img/feature_banner.png">
-                </div>
-            </header>
-
-            <div class="row newsletter">
-                <div class="col-xs-12 col-md-7">
-                    Get the latest <img src="img/logo.png" class="logo"> news in your inbox
-                </div>
-                <div class="col-xs-12 col-md-5">
-                    <input type="text" placeholder="Your Email Address">
-                    <button type="button" class="btn btn-default">Subscribe</button>
-                </div>
-            </div>
+        <div id="content" ng-app="leftstitch" ng-controller="fileDragDropController">
 
             <div class="row">
                 <div class="col-xs-12">
-
-                    <!-- Content goes here! -->
-                    <div id="masonry" masonry ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
-                        <div class="masonry-brick item" ng-repeat="picture in pictures">
-                            <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
-                            <div class="item-preview-overlay">
-                                <span class="product-name">Overlay text</span><br>
-                                <span class="designer-name">Overlay text</span>
-                            </div>
-                        </div>
+                    <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
+                        file="image" file-name="imageFileName" data-max-file-size="3">
+                        <span>Drop Image Here</span>
                     </div>
-                    <!-- End content -->
-
+                    <div class="image-container">
+                        <img ng-src={{image}} />
+                        <span class="file-name">{{imageFileName}}</span>
+                    </div>
                 </div>
             </div>
 
@@ -76,8 +57,9 @@
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
 
         <!-- Angular App Files -->
+        <script src="js/angular-app/directives/fileDragDropDirective.js"></script>
         <script src="js/angular-app/controllers/mainController.js"></script>
-        <script src="js/angular-app/controllers/chatController.js"></script>
+        <script src="js/angular-app/controllers/briefController.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.min.js"></script>
         <script src="//passy.github.io/angular-masonry/angular-masonry.js"></script>
 
