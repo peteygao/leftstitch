@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>LeftStitch Gallery</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <navigation class="row">
+            <div class="col-xs-12 col-md-5">
+                <img src="img/logo.png" class="logo">
+            </div>
+
+            <div class="col-xs-12 col-md-7">
+                <div class="row menu-links">
+                    <div class="col-xs-4">
+                        Browse Product
+                    </div>
+                    <div class="col-xs-4">
+                        Start a Project
+                    </div>
+                    <div class="col-xs-2">
+                        Login
+                    </div>
+                    <div class="col-xs-2">
+                        Register
+                    </div>
+                </div>
+            </div>
+        </navigation>
+
+        <div id="content">
+
+            <header class="row">
+                <div class="col-xs-12 featured-banner">
+                    <img src="img/feature_banner.png">
+                </div>
+            </header>
+
+            <div class="row newsletter">
+                <div class="col-xs-12 col-md-7">
+                    Get the latest <img src="img/logo.png" class="logo"> news in your inbox
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <input type="text" placeholder="Your Email Address">
+                    <button type="button" class="btn btn-default">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Content goes here! -->
+                    <div id="masonry" masonry ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
+                        <div class="masonry-brick item" ng-repeat="picture in pictures">
+                            <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
+                            <div class="item-preview-overlay">
+                                <span class="product-name">Overlay text</span><br>
+                                <span class="designer-name">Overlay text</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End content -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="row">
+            <div class="col-md-4 col-xs-12">Left side footer</div>
+            <div class="col-md-4 col-xs-12">&copy; 2013 LeftStitch</div>
+            <div class="col-md-4 col-xs-12">Right side footer</div>
+        </footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+
+        <!-- Angular App Files -->
+        <script src="js/angular-app/controllers/mainController.js"></script>
+        <script src="js/angular-app/controllers/chatController.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.min.js"></script>
+        <script src="//passy.github.io/angular-masonry/angular-masonry.js"></script>
+
+        <!-- Startup Angular App -->
+        <script src="js/angular-app/modules/app.js"></script>
+
+        <script src="//desandro.github.io/imagesloaded/imagesloaded.pkgd.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"></script>
+        <script src="//cdn.firebase.com/v0/firebase.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

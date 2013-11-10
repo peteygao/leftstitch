@@ -4,9 +4,26 @@ html {
 body {
   background-color: #fff; }
 
+.logo {
+  height: 2rem; }
+
 #content {
   max-width: 1000px;
   margin: 0 auto; }
+
+navigation {
+  max-width: 1000px;
+  margin: 0 auto 1rem auto !important;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  line-height: 3rem;
+  display: block;
+  text-transform: uppercase; }
+  navigation img.logo {
+    margin-top: .5rem; }
+  navigation .menu-links div {
+    border-left: 1px solid #000;
+    text-align: center; }
 
 header {
   height: 22rem;
@@ -40,8 +57,7 @@ button.btn-default {
   font-size: 1rem;
   text-transform: uppercase;
   margin: 1rem 0; }
-  .newsletter img {
-    height: 2rem;
+  .newsletter img.logo {
     margin-top: -4px; }
   .newsletter input {
     height: 2rem;

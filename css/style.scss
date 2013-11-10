@@ -6,9 +6,32 @@ body {
     background-color:#fff;
 }
 
+.logo {
+    height: 2rem;
+}
+
 #content {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+navigation {
+    max-width: 1000px;
+    margin: 0 auto 1rem auto !important;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    line-height: 3rem;
+    display: block;
+    text-transform: uppercase;
+
+    img.logo {
+        margin-top: .5rem;
+    }
+
+    .menu-links div {
+        border-left: 1px solid #000;
+        text-align: center;
+    }
 }
 
 header {
@@ -23,7 +46,7 @@ header {
         text-decoration: none;
     }
 
-    .login{
+    .login {
         float: right;
         margin-right: 10px;
     }
@@ -56,8 +79,7 @@ button.btn-default {
     text-transform: uppercase;
     margin: 1rem 0;
 
-    img {
-        height: 2rem;
+    img.logo {
         margin-top: -4px;
     }
 
