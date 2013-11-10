@@ -38,3 +38,15 @@ footer {
     background-color: #fefefe;
     min-height: 10rem;
 }
+
+/* single brief page */
+
+.submission-list{
+  list-style:none;
+}
+
+.submission-list > li{
+  display:inline;
+  float:left;
+  margin:10px;
+}
