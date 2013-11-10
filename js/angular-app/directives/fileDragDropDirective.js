@@ -75,7 +75,6 @@
 
         $scope.$watch('image', function(newValue, oldValue) {
             if (newValue !== "" && newValue !== null && newValue !== void 0) {
-                $location
                 console.log('image uploaded');
             }
         });

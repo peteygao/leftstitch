@@ -30,7 +30,7 @@
             </div>
         </navigation>
 
-        <div id="content" ng-app="leftstitch" ng-controller="fileDragDropController">
+        <div id="content" ng-app="leftstitch" ng-controller="submissionController" ng-init="init()">
 
             <div class="row">
                 <div class="col-xs-12">
@@ -59,6 +59,7 @@
         <!-- Angular App Files -->
         <script src="js/angular-app/directives/fileDragDropDirective.js"></script>
         <script src="js/angular-app/controllers/mainController.js"></script>
+        <script src="js/angular-app/controllers/submissionController.js"></script>
         <script src="js/angular-app/controllers/briefController.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.min.js"></script>
         <script src="//passy.github.io/angular-masonry/angular-masonry.js"></script>

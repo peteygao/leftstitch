@@ -3,6 +3,7 @@
 angular.module('leftstitch', ['ui.bootstrap', 'wu.masonry', 'reusableThings'])
     .controller('briefController', ['$scope', '$location', briefController])
     .controller('mainController', ['$scope', mainController])
+    .controller('submissionController', ['$scope', '$location', submissionController])
     .run(function($rootScope) {
         $rootScope._content = new Firebase('https://leftstitch.firebaseio.com/content');
         $rootScope._briefs = new Firebase('https://leftstitch.firebaseio.com/briefs');
