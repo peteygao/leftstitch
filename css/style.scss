@@ -93,10 +93,13 @@ div.item {
 }
 
 footer {
+    border-top: 2px solid #000;
     padding: 1rem 2rem;
     text-align: center;
     background-color: #fefefe;
     min-height: 10rem;
+    max-width: 1000px;
+    margin: 0 auto !important;
 }
 
 /* single brief page */
