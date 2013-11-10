@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>LeftStitch Gallery</title>
+        <title>LeftStitch Brief</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
@@ -49,22 +49,6 @@
 
         <div id="content">
 
-            <header class="row">
-                <div class="col-xs-12 featured-banner">
-                    <img src="img/Women-Lingerie-Fashion-2013-HD-Wallpaper-1080x607.jpg">
-                </div>
-            </header>
-
-            <div class="row newsletter">
-                <div class="col-xs-12 col-md-7">
-                    Get the latest <img src="img/logo.png"> news in your inbox
-                </div>
-                <div class="col-xs-12 col-md-5">
-                    <input type="text" placeholder="Your Email Address">
-                    <button type="button" class="btn btn-default">Subscribe</button>
-                </div>
-            </div>
-
             <div class="row">
                 <div class="col-xs-12">
 
@@ -73,7 +57,7 @@
 
                       <div class="col-xs-9">
                       <div class="judge-cont" ng-model="judge">
-                        <a href="{{judge.id}}"><img src="http://placehold.it/100x100"/></a>{{judge.name}} wants to see ...
+                        <a href="{{judge.id}}"><img src="{{judge.avatar}}"/></a>{{judge.name}} wants to see ...
                       </div>
                       <h3 class="brief-header">{{brief.title}}</h3>
                       <p class="brief-description">{{brief.description}}</p>
@@ -84,9 +68,9 @@
                       </div>
 
                       <p class="dates-cont">
-                      Submissions are due in: <span class="submission-date">{{timeAgo( brief.endSubmissionDate )}}</span>. Funding will end in 
-                      <span class="fund-date">{{timeAgo( brief.startFundDate )}}</span>.
-                      <p>
+                      Submissions are due in: <span class="submission-date">{{timeAgo( brief.endSubmissionDate )}}</span>. 
+                      Funding will end in: <span class="fund-date">{{timeAgo( brief.startFundDate )}}</span>.
+                      </p>
 
                       <div class="submissions">
                         <h4 class="submissions-header">Submissions</h4>
@@ -110,16 +94,15 @@
                       <div class="side-header">
                         <button class="submission-submit">submit</button>
                       </div>
+                      <h4 class="rule-warning">Please read this carefully before you submit.</h4>
                       <div class="side-rules" ng-repeat="rule in brief.rules">
                         <h5>{{rule.title}}</h5>
                         <p>{{rule.rule}}</p>
                       </div>
                     </div>
-
                     <!-- End content -->
                 </div>
             </div>
-
         </div>
 
         <footer class="row">
