@@ -1,3 +1,6 @@
+html {
+  font-size: 16px; }
+
 body {
   background-color: #e0e0e0; }
 
@@ -14,7 +17,11 @@ header {
     margin-right: 10px; }
 
 div.item {
-  padding: 1rem; }
+  padding: 1rem;
+  margin-right: .5rem;
+  margin-left: .5rem; }
+  div.item img {
+    max-width: 18.5rem; }
 
 footer {
   padding: 1rem 2rem;

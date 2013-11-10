@@ -47,9 +47,17 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <div masonry id="content" ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
-            <div class="masonry-brick item well" ng-repeat="picture in pictures">
-                <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
+        <div id="content" class="row">
+            <div class="col-xs-12">
+
+                <!-- Content goes here! -->
+                <div masonry ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
+                    <div class="masonry-brick item well" ng-repeat="picture in pictures">
+                        <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
+                    </div>
+                </div>
+                <!-- End content -->
+
             </div>
         </div>
 
