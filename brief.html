@@ -54,50 +54,67 @@
 
                     <!-- Content goes here! -->
                     <div id="main" ng-app="leftstitch" ng-controller="briefController" ng-init="init()">
-
-                      <div class="col-xs-9">
                       <div class="judge-cont" ng-model="judge">
-                        <a href="{{judge.id}}"><img src="{{judge.avatar}}"/></a>{{judge.name}} wants to see ...
-                      </div>
-                      <h3 class="brief-header">{{brief.title}}</h3>
-                      <p class="brief-description">{{brief.description}}</p>
-
-                      <div class="controls">
-                        <button class="follow">follow</button>
-                        <button class="submit-design">submit design</button>
+                        <a href="{{judge.id}}"><img class="judge-avatar" src="{{judge.avatar}}"/></a><span class="judge-wants">{{judge.name}} wants to see...</span>
                       </div>
 
-                      <p class="dates-cont">
-                      Submissions are due in: <span class="submission-date">{{timeAgo( brief.endSubmissionDate )}}</span>. 
-                      Funding will end in: <span class="fund-date">{{timeAgo( brief.startFundDate )}}</span>.
-                      </p>
+                      <div class="col-xs-9 main-col">
+                        <div class="main-cont">
+                          <div class="brief-cont">
+                            <h3 class="brief-header">{{brief.title}}</h3>
+                            <p class="brief-description">{{brief.description}}</p>
 
-                      <div class="submissions">
-                        <h4 class="submissions-header">Submissions</h4>
-                        <ul class="submission-list" ng-repeat="submission in brief.submissions">
-                          <li>
-                            <div class="submission-head">
-                              <img class="submission-user-avatar" src="{{submission.user.avatar}}"/>
-                              <span class="submission-username">{{submission.user.name}}/{{submission.user.submissionCount}}</span>
-                              <h4>{{submission.title}}</h4>
-                            </div>
-                            <ul class="submission-image-list" ng-repeat="submissionImage in submission.images">
-                              <li><img src="{{submissionImage}}"/></li>
+                            <ul class="brief-images-cont">
+                              <li ng-repeat="image in brief.images">
+                                <div class="fimage">
+                                  <img src="{{image}}"/>
+                                </div>
+                              </li>
                             </ul>
-                          </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                    </div>
+                            <div class="clearfix"></div>
+                          </div>
 
-                    <div class="col-xs-3">
-                      <div class="side-header">
-                        <button class="submission-submit">submit</button>
+                          <div class="submissions">
+                            <h4 class="submissions-header">PROJECT ENTRIES</h4>
+                            <ul class="submission-list">
+                              <li ng-repeat="submission in brief.submissions">
+                                <div class="submission-head">
+                                  <img class="submission-user-avatar" src="{{submission.user.avatar}}"/>
+                                  <h4>{{submission.title}}</h4>
+                                  <span class="submission-username">{{submission.user.name}}&nbsp/&nbsp{{submission.user.submissionCount}} designs</span>
+                                </div>
+                                <ul class="submission-image-list">
+                                  {{console.log(submission.images)}}
+                                  <li ng-repeat="submissionImage in submission.images">
+                                    <div class="fimage">
+                                      <img src="{{submissionImage}}"/>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p class="submission-description">{{submission.description}}</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                      <h4 class="rule-warning">Please read this carefully before you submit.</h4>
-                      <div class="side-rules" ng-repeat="rule in brief.rules">
-                        <h5>{{rule.title}}</h5>
-                        <p>{{rule.rule}}</p>
+
+                    <div class="col-xs-3 side-col">
+                      <div class="side-header">
+
+                        <p class="dates-cont">
+                          <p class="submission-date">{{timeAgo( brief.endSubmissionDate )}}</p>
+                          <p>until submission closes.</p> 
+                        </p>
+
+                        <button class="btn btn-default submission-submit">submit</button>
+                      </div>
+                      <div class="rules-cont">
+                        <h4 class="rule-warning">Please read this carefully before you submit.</h4>
+                        <div class="side-rules" ng-repeat="rule in brief.rules">
+                          <h5>{{rule.title}}</h5>
+                          <p>{{rule.rule}}</p>
+                        </div>
                       </div>
                     </div>
                     <!-- End content -->

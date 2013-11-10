@@ -9,14 +9,14 @@ var briefController = function($scope, $location) {
     $scope.init = function() {
 
       var briefId = $location.search()['briefId'];
+      console.log( "brief id", briefId );
 
-      console.log( briefId );
+      var url = 'https://leftstitch.firebaseio.com/briefs/'+briefId;
+      console.log( 'url', url );
 
-      //$scope.judge = 
+      $scope.brief_ref = new Firebase(url);
 
-      $scope.brief = new Firebase('https://leftstitch.firebaseio.com/briefs/'+briefId);
-
-      $scope.brief.on('value', function(snapshot) {
+      $scope.brief_ref.on('value', function(snapshot) {
           console.log('actual brief value: ', snapshot.val());
 
           $scope.brief = snapshot.val();
