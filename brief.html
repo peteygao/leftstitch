@@ -1,11 +1,11 @@
 <html>
     <head>
-        <title>LeftStitch Brief Entry</title>
+        <title>LeftStitch Gallery</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -47,39 +47,83 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <div class="well" ng-app="leftStitch" ng-controller="main">
-          <div class="judge-cont">
-            <img src="http://placehold.it/100x100"/><a href="#">Michael Kors</a> wants to see ...
-          </div>
-          <h3 class="brief-header">Bakcpack with Tassels</h3>
-          <p class="brief-description">
-          rem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+        <div id="content">
 
-          <div class="controls">
-            <button class="follow">follow</button>
-            <button class="submit-design">submit design</button>
-          </div>
+            <header class="row">
+                <div class="col-xs-12 featured-banner">
+                    <img src="img/Women-Lingerie-Fashion-2013-HD-Wallpaper-1080x607.jpg">
+                </div>
+            </header>
 
-          <p class="dates-cont">
-            Submissions are due in: <span class="submission-date">20 days</span>. Funding will end in 
-            <span class="fund-date">34 days</span>.
-          <p>
+            <div class="row newsletter">
+                <div class="col-xs-12 col-md-7">
+                    Get the latest <img src="img/logo.png"> news in your inbox
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <input type="text" placeholder="Your Email Address">
+                    <button type="button" class="btn btn-default">Subscribe</button>
+                </div>
+            </div>
 
-          <div class="submissions">
-            <h4 class="submission-header">Submissions</h4>
-            <ul class="submission-list">
-              <li><img src="http://placehold.it/100x100"/></li>
-              <li><img src="http://placehold.it/100x100"/></li>
-              <li><img src="http://placehold.it/100x100"/></li>
-              <li><img src="http://placehold.it/100x100"/></li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Content goes here! -->
+                    <div id="main" ng-app="leftstitch" ng-controller="briefController" ng-init="init()">
+                      <div class="judge-cont">
+                        <img src="http://placehold.it/100x100"/><a href="#">Michael Kors</a> wants to see ...
+                      </div>
+                      <h3 class="brief-header">Bakcpack with Tassels</h3>
+                      <p class="brief-description">
+                      rem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+
+                      <div class="controls">
+                        <button class="follow">follow</button>
+                        <button class="submit-design">submit design</button>
+                      </div>
+
+                      <p class="dates-cont">
+                        Submissions are due in: <span class="submission-date">20 days</span>. Funding will end in 
+                        <span class="fund-date">34 days</span>.
+                      <p>
+
+                      <div class="submissions">
+                        <h4 class="submission-header">Submissions</h4>
+                        <ul class="submission-list">
+                          <li><img src="http://placehold.it/100x100"/></li>
+                          <li><img src="http://placehold.it/100x100"/></li>
+                          <li><img src="http://placehold.it/100x100"/></li>
+                          <li><img src="http://placehold.it/100x100"/></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <!-- End content -->
+
+                </div>
+            </div>
 
         </div>
-        <footer>leftstitch</footer>
+
+        <footer class="row">
+            <div class="col-md-4 col-xs-14">Left side footer</div>
+            <div class="col-md-4 col-xs-14">&copy; 2013 LeftStitch</div>
+            <div class="col-md-4 col-xs-14">Right side footer</div>
+        </footer>
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+
+        <!-- Angular App Files -->
+        <script src="js/angular-app/controllers/briefController.js"></script>
+        <script src="js/angular-app/controllers/mainController.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.min.js"></script>
+        <script src="//passy.github.io/angular-masonry/angular-masonry.js"></script>
+
+        <!-- Startup Angular App -->
+        <script src="js/angular-app/modules/app.js"></script>
+
+        <script src="//desandro.github.io/imagesloaded/imagesloaded.pkgd.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
