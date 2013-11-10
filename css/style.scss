@@ -69,13 +69,26 @@ button.btn-default {
     }
 }
 
+#masonry {
+    margin: 0 -.5rem;
+}
+
 div.item {
-    padding: 1rem;
     margin-right: .5rem;
     margin-left: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
 
     img {
-        max-width: 17.5rem;
+        max-width: 20rem;
+    }
+
+    .item-preview-overlay {
+        padding: .5rem;
+
+        .product-name {
+            font-size: 1.125rem;
+        }
     }
 }
 

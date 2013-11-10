@@ -49,12 +49,20 @@ button.btn-default {
     margin-top: -4px;
     text-transform: uppercase; }
 
+#masonry {
+  margin: 0 -.5rem; }
+
 div.item {
-  padding: 1rem;
   margin-right: .5rem;
-  margin-left: .5rem; }
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd; }
   div.item img {
-    max-width: 17.5rem; }
+    max-width: 20rem; }
+  div.item .item-preview-overlay {
+    padding: .5rem; }
+    div.item .item-preview-overlay .product-name {
+      font-size: 1.125rem; }
 
 footer {
   padding: 1rem 2rem;
