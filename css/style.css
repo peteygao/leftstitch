@@ -9,7 +9,7 @@ body {
   margin: 0 auto; }
 
 header {
-  height: 24rem;
+  height: 22rem;
   overflow: hidden; }
   header a {
     float: left;
@@ -28,6 +28,9 @@ button.btn-default {
   border-radius: 0;
   border: 0;
   color: #fff; }
+  button.btn-default:hover {
+    color: #fff;
+    background-color: #cb0000; }
 
 .newsletter {
   line-height: 2rem;
