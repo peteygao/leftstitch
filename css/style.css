@@ -2,10 +2,15 @@ html {
   font-size: 16px; }
 
 body {
-  background-color: #e0e0e0; }
+  background-color: #fff; }
+
+#content {
+  max-width: 1000px;
+  margin: 0 auto; }
 
 header {
-  height: 50px; }
+  height: 22rem;
+  overflow: hidden; }
   header a {
     float: left;
     font-size: 20px;
@@ -15,13 +20,41 @@ header {
   header .login {
     float: right;
     margin-right: 10px; }
+  header .featured-banner img {
+    max-width: 1000px; }
+
+button.btn-default {
+  background-color: #fe4000;
+  border-radius: 0;
+  border: 0;
+  color: #fff; }
+
+.newsletter {
+  line-height: 2rem;
+  padding: .5rem;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1rem 0; }
+  .newsletter img {
+    height: 2rem;
+    margin-top: -4px; }
+  .newsletter input {
+    height: 2rem;
+    background-color: #eee;
+    border: 2px;
+    padding: 4px; }
+  .newsletter button {
+    margin-top: -4px;
+    text-transform: uppercase; }
 
 div.item {
   padding: 1rem;
   margin-right: .5rem;
   margin-left: .5rem; }
   div.item img {
-    max-width: 18.5rem; }
+    max-width: 17.5rem; }
 
 footer {
   padding: 1rem 2rem;

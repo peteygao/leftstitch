@@ -47,18 +47,38 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <div id="content" class="row">
-            <div class="col-xs-12">
+        <div id="content">
 
-                <!-- Content goes here! -->
-                <div masonry ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
-                    <div class="masonry-brick item well" ng-repeat="picture in pictures">
-                        <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
-                    </div>
+            <header class="row">
+                <div class="col-xs-12 featured-banner">
+                    <img src="img/Women-Lingerie-Fashion-2013-HD-Wallpaper-1080x607.jpg">
                 </div>
-                <!-- End content -->
+            </header>
 
+            <div class="row newsletter">
+                <div class="col-xs-12 col-md-7">
+                    Get the latest <img src="img/logo.png"> news in your inbox
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <input type="text" placeholder="Your Email Address">
+                    <button type="button" class="btn btn-default">Subscribe</button>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Content goes here! -->
+                    <div masonry ng-app="leftstitch" ng-controller="mainController" ng-init="init()">
+                        <div class="masonry-brick item well" ng-repeat="picture in pictures">
+                            <img class="item-preview" ng-src="{{picture}}" alt="Yay!">
+                        </div>
+                    </div>
+                    <!-- End content -->
+
+                </div>
+            </div>
+
         </div>
 
         <footer class="row">
