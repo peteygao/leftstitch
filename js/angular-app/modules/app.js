@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module('leftstitch', ['ui.bootstrap', 'wu.masonry'])
-    .controller('briefController', ['$scope', briefController])
+    .controller('briefController', ['$scope', '$location', briefController])
     .controller('mainController', ['$scope', mainController])
     .run(function($rootScope) {
         $rootScope._content = new Firebase('https://leftstitch.firebaseio.com/content');
